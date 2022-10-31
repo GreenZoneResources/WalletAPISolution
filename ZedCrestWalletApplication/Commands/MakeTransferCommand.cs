@@ -8,6 +8,7 @@ using ZedCrestWalletApplication.Models;
 
 namespace ZedCrestWalletApplication.Commands
 {
+    //this is the make transfer command
     public class MakeTransferCommand : IRequest<Response>
     {
         public string FromAccount { get; set; }
