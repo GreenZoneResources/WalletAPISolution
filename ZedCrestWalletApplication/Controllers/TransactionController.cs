@@ -50,10 +50,10 @@ namespace ZedCrestWalletApplication.Controllers
         {
             if (!ModelState.IsValid) return BadRequest("Parameters are not in correct format");
             Response message = null;
-            var dateOfDay = DateTime.Now;
+            //var dateOfDay = DateTime.Now;
             DateTime midnightTime = DateTime.Now.AddHours(-DateTime.Now.Hour).AddMinutes(-DateTime.Now.Minute)
             .AddSeconds(-DateTime.Now.Second);
-            if (dateOfDay == midnightTime)
+            if (midnightTime != null)
             {
                 var getAllAccount = _accountService.GetAllAccount().ToList();
                 for(int i = 0; i < getAllAccount.Count; i++)
